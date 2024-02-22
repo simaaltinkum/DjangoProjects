@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ana Sayfa</title>
+</head>
+<body>
+    <h1>Welcome {{ request.user }}</h1>
+
+    <h2>Tweet List</h2>
+    <ul>
+        {% for tweet in tweet_list %}
+            <li>{{ tweet.person.username }}</li>
+            <li>{{ tweet.content }}</li>
+        {% endfor %}
+    </ul>
+
+    <div class="d-flex">
+    <a href="/login/" class="btn btn-primary">
+      <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
+      Log In
+    </a>
+    </div>
+
+    <div class="d-flex">
+      <a href="/tweet/" class="btn btn-primary">
+        <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
+        Tweet
+      </a>
+    </div>
+
+    <div class="d-flex">
+      <a href="/logout/" class="btn btn-primary">
+        <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
+        Log Out
+      </a>
+    </div>
+</body>
+</html>
