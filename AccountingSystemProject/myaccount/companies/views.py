@@ -16,20 +16,6 @@ def add_company(request):
         form = CompaniesForm()
     return render(request, 'index.html')
 
-def showCompany(request, pk):
-    account_list = Companies.objects.get(pk=pk)
-    context = {
-        "account_list": account_list
-    }
-    return render(request, "show.html", context)
-
-def info(request):
-    account_list = Companies.objects.all()
-    context = {
-        "account_list": account_list
-    }
-    render(request, "info.html", context)
-
 def selectCompany(request):
 
     account_list = Companies.objects.all()
