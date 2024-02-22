@@ -1,0 +1,6 @@
+Total : {{ length }}
+{% for mail in email %}
+    <p>{{ forloop.counter }} -- {{ mail.email }}</p>
+{% endfor %}
+
+
