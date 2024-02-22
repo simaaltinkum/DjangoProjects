@@ -6,3 +6,4 @@ class Tweet(models.Model):
     content = models.CharField(max_length=140)
     image = models.ImageField(upload_to='media/')
     created_at = models.DateTimeField(auto_now_add=True)
+
